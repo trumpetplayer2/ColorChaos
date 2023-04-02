@@ -7,6 +7,7 @@ public class BoxHole : MonoBehaviour
     bool isFilled = false;
     public GameObject hole;
     public Sprite box;
+    public AudioSource sfx;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Box")
@@ -19,6 +20,7 @@ public class BoxHole : MonoBehaviour
                 SpriteRenderer spriteRenderer = hole.GetComponent<SpriteRenderer>();
                 spriteRenderer.sprite = box;
                 spriteRenderer.color = Color.gray;
+                sfx.PlayOneShot(sfx.clip);
                 Destroy(this.gameObject);
             }
         }

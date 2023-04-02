@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public Color[] PowerColorList;
     public float[] PowerSpeed;
     public string[] PowerLayer;
+    public AudioSource sfx;
     
     private SpriteRenderer spriteRenderer;
 
@@ -45,6 +46,10 @@ public class PlayerController : MonoBehaviour
         movementSpeed = PowerSpeed[(int)color];
         gameObject.layer = LayerMask.NameToLayer(PowerLayer[(int)color]);
         currentPower = color;
+        if(sfx != null)
+        {
+            sfx.PlayOneShot(sfx.clip);
+        }
     }
 
     public PlayerPower getColor()
