@@ -120,6 +120,7 @@ MonoBehaviour:
   - Yellow
   - Blue
   - Green
+  sfx: {fileID: 0}
 --- !u!50 &9074715195846658429
 Rigidbody2D:
   serializedVersion: 4
@@ -169,7 +170,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e3af0a04578be68409db599c69f87d08, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
